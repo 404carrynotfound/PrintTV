@@ -29,7 +29,7 @@ export default function ChannelsList({ channels }) {
             {
                 channels.length > 0
                     ? channels.map((tabInfo, index) => <Tab label={tabInfo.name} id={`vertical-tab-${index}`} key={tabInfo.name} aria-controls={`vertical-tabpanel-${index}`} />)
-                    : <Tab label="No active channels" />
+                    : <Tab label="No active channels" disabled />
             }
         </Tabs>
     )

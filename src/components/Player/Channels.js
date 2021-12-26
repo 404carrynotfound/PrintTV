@@ -4,7 +4,7 @@ import ChannelsList from './ChannelsList.js';
 
 import { useEffect, useState } from 'react';
 
-import { get } from '../../services/requestService.js';
+import { getAll } from '../../services/channelsService.js';
 
 
 import './Channels.css';
@@ -13,7 +13,7 @@ export default function Channels() {
   const [channels, setChannels] = useState([]);
 
   useEffect(() => {
-    get('http://localhost:3030/public/playlist.json')
+    getAll()
         .then(res => {
             setChannels(res);
         });
