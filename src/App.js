@@ -6,6 +6,7 @@ import Logout from './components/Logout';
 import Main from './components/Main';
 import Notification from './components/Common/Notification';
 import Streaming from './components/Streming';
+import PrivateRoute from './components/Common/PrivateRoute';
 
 import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
@@ -22,7 +23,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/" element={<Main />} />
-          <Route path="/player" element={<Streaming />}></Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/player" element={<Streaming />}></Route>
+          </Route>
         </Routes>
       </NotificationProvider>
     </AuthProvider>
