@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Register from './components/Register';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import Main from './components/Main';
 import Notification from './components/Common/Notification';
 import Streaming from './components/Streming';
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/" element={<Main />} />
           <Route path="/player" element={<Streaming />}></Route>
         </Routes>
