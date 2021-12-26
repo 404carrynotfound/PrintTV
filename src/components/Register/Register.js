@@ -70,8 +70,12 @@ export default function Register() {
 			const password = data.get('password');
 			authService.register(email, password)
 				.then(authData => {
+					addNotification('You register successfully', types.success);
 					login(authData);
 					navigate('/player');
+				})
+				.catch(err => {
+					addNotification(err);
 				});
 		}
 	};

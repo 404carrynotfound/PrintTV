@@ -41,8 +41,7 @@ export default function Login() {
         navigate('/player');
       })
       .catch(err => {
-        addNotification(err.message, types.error);
-        console.log(err);
+        addNotification(err, types.error);
       });
   }
 

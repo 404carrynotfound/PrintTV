@@ -6,6 +6,7 @@ const initialAuthState = {
     _id: '',
     email: '',
     accessToken: '',
+    isAdmin: false
 };
 
 export const AuthContext = createContext();
