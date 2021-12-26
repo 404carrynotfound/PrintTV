@@ -1,6 +1,6 @@
 import * as request from './requestService.js';
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:3030/data';
+const baseUrl = "https://print-tv-api.herokuapp.com/data";
 
 export const getAll = () => request.get(`${baseUrl}/playlist`);
 
