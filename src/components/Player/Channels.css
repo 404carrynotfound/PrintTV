@@ -1,0 +1,6 @@
+.channels-list {
+    flex-grow: 1;
+    background-color: paper;
+    display: flex;
+    height: max-content;
+}

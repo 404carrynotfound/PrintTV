@@ -3,7 +3,8 @@ import { createContext, useContext, useState } from "react";
 const initialControlsState = {
     play: false,
     volume: 0.2,
-    fullScreen: false
+    fullScreen: false,
+    channel: ''
 };
 
 export const ControlsContext = createContext();
@@ -38,8 +39,19 @@ export const ControlsProvider = ({ children }) => {
         })
     }
 
+    const channel = (channel) => {
+        setControls(state => {
+            return {
+                ...state,
+                channel,
+                play: true
+            }
+        })
+    }
+
+
     return (
-        <ControlsContext.Provider value={{ controls, play, volume, fullScreen }}>
+        <ControlsContext.Provider value={{ controls, play, volume, fullScreen, channel }}>
             {children}
         </ControlsContext.Provider>
     )
