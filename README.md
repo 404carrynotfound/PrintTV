@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# PrintTV - IPTV Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+OdinSmurfs is an IPTV application built on ReactJS and NodeJS. It's purpose is to provide IPTV to everyone. The application also provides admin functionality where everything can be easily maganged.
 
-## Available Scripts
+The application has three levels of accessibility: guest user, administrator and registered user
 
-In the project directory, you can run:
+## Routes
+| Route  | Description | Access Level |
+| ------------- | ------------- | ------------- |
+| /  | Home page  | Guests only |
+| /login  | Login page  | Guests only |
+| /register  | Register page  | Guests only |
+| /support  | Support page  | All Users |
+| /player  | Player Page  | Registered only |
+| /admin/channels  | All channels  | Administrator |
+| /admin/tickets | All tickets  | Administrator |
 
-### `npm start`
+## Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Home page**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+route: '/'
 
-### `npm test`
+Just a welcome page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Login page**
 
-### `npm run build`
+route: '/login'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A login page, nothing special.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Register page**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+route: '/register'
 
-### `npm run eject`
+A register page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Support**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+route: '/support'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A page with support form about our services.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Player**
 
-## Learn More
+route: '/player'
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A page with channels and player.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Channels**
 
-### Code Splitting
+route: '/admin/channels'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A page where only admin see all channels, he can add more and remove.
 
-### Analyzing the Bundle Size
+**Tickets**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+route: '/admin/tickets'
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A page where only admin see all submited tickets, he can remove.
