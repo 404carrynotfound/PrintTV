@@ -19,4 +19,6 @@ export const create = async (playlistData, token) => {
     return result;
 };
 
-export const update = (playlistId, playlistData) => request.put(`${baseUrl}/playlist/${playlistId}`, playlistData);
+export const update = (channelId, channelData) => request.put(`${baseUrl}/playlist/${channelId}`, channelData);
+
+export const remove = (channelId) => request.remove(`${baseUrl}/playlist/${channelId}`)
