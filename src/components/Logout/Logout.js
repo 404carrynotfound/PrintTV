@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { useEffect } from 'react';
 
@@ -7,20 +7,18 @@ import { useAuthContext } from '../../contexts/AuthContext';
 import { useNotificationContext, types } from '../../contexts/NotificationContext.js'; 
 
 const Logout = () => {
-    const navigate = useNavigate();
     const { user, logout } = useAuthContext();
     const { addNotification } = useNotificationContext();
     
     useEffect(() => {
-        authService.logout(user.accessToken)
+        return authService.logout(user.accessToken)
             .then(() => {
                 addNotification('You logged out successfully', types.success);
                 logout();
-                navigate('/');
             })
-    }, [])
+    }, [addNotification, logout, user.accessToken])
 
-    return null;
+    return <Navigate to="/"/>;
 };
 
 export default Logout;
