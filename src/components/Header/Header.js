@@ -29,10 +29,7 @@ export default function Header() {
     const adminNav = (
         <>
             <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }} />
-            <Link variant="button" color="text.primary" href="#" sx={{ my: 1, mx: 1.5 }} >
-                Features
-            </Link>
-            <Link variant="button" color="text.primary" to="/admin" sx={{ my: 1, mx: 1.5 }} component={RouterLink} >
+            <Link variant="button" color="text.primary" to="/admin/channels" sx={{ my: 1, mx: 1.5 }} component={RouterLink} >
                 Admin Panel
             </Link>
             <Button to="/logout" variant="outlined" sx={{ my: 1, mx: 1.5 }} LinkComponent={RouterLink}>
