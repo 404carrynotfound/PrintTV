@@ -11,6 +11,8 @@ import PrivateRoute from './components/Common/PrivateRoute';
 import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
 import Footer from './components/Footer';
+import AdminRoute from './components/Common/AdminRoute.js';
+import Admin from './components/Admin/Admin.js';
 
 
 function App() {
@@ -26,6 +28,10 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route element={<PrivateRoute />}>
             <Route path="/player" element={<Streaming />}></Route>
+          </Route>
+          <Route element={<AdminRoute />}>
+            <Route path="/admin/channels" element={<Admin />} />
+            <Route path="/admin/tickets" element={<Admin />} />
           </Route>
         </Routes>
 
