@@ -10,7 +10,6 @@ export default function Streaming() {
         <ControlsProvider>
             <Header />
             <Player vod={false} className="player" />
-            <Footer />
         </ControlsProvider>
     )
 }

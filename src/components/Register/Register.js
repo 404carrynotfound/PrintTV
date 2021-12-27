@@ -15,8 +15,6 @@ import { useState } from 'react';
 
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
-import { Copyright } from '../Common/Copyrigth';
-
 import { useAuthContext } from '../../contexts/AuthContext';
 import { useNotificationContext, types } from '../../contexts/NotificationContext';
 
@@ -162,7 +160,6 @@ export default function Register() {
 					</Grid>
 				</Box>
 			</Box>
-			<Copyright sx={{ mt: 5 }} />
 		</Container>
 	);
 }

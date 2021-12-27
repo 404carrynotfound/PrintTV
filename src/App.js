@@ -10,6 +10,7 @@ import PrivateRoute from './components/Common/PrivateRoute';
 
 import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
             <Route path="/player" element={<Streaming />}></Route>
           </Route>
         </Routes>
+
+        <Footer />
       </NotificationProvider>
     </AuthProvider>
   );

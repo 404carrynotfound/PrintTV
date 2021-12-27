@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import GlobalStyles from '@mui/material/GlobalStyles';
 import Container from '@mui/material/Container';
 
-import Footer from '../Footer';
 import Header from '../Header';
 
 import PriceCard from './PriceCard';
@@ -75,7 +74,6 @@ function PricingContent() {
                     {tiers.map((tier) => (<PriceCard key={tier.price} tier={tier} />))}
                 </Grid>
             </Container>
-            <Footer />
         </>
     );
 }

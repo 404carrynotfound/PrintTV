@@ -13,8 +13,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
-import { Copyright } from '../Common/Copyrigth';
-
 import { useAuthContext } from '../../contexts/AuthContext';
 import { useNotificationContext, types } from '../../contexts/NotificationContext';
 
@@ -77,7 +75,6 @@ export default function Login() {
           </Grid>
         </Box>
       </Box>
-      <Copyright sx={{ mt: 8, mb: 4 }} />
     </Container>
   );
 }
