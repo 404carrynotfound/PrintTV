@@ -1,12 +1,11 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import StarIcon from '@mui/icons-material/StarBorder';
 import Typography from '@mui/material/Typography';
+
 
 export default function PriceCard({tier}) {
     return (
@@ -44,12 +43,6 @@ export default function PriceCard({tier}) {
                         ))}
                     </ul>
                 </CardContent>
-                <CardActions>
-                    {/* add route for pricing */}
-                    <Button fullWidth variant={tier.buttonVariant}>
-                        {tier.buttonText}
-                    </Button>
-                </CardActions>
             </Card>
         </Grid>
     )

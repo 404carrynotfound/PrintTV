@@ -7,6 +7,7 @@ import Main from './components/Main';
 import Notification from './components/Common/Notification';
 import Streaming from './components/Streming';
 import PrivateRoute from './components/Common/PrivateRoute';
+import SupportForm from './components/SupportForm';
 
 import { AuthProvider } from './contexts/AuthContext';
 import { NotificationProvider } from './contexts/NotificationContext';
@@ -22,6 +23,7 @@ function App() {
       <NotificationProvider>
         <Notification />
         <Routes>
+          <Route path="/support" element={<SupportForm />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />

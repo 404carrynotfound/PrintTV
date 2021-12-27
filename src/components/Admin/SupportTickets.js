@@ -16,7 +16,7 @@ export default function SupportTickets() {
         (params) => () => {
             remove(params.id).then(() => {
                 setTickets((prevRows) => prevRows.filter((row) => row.id !== params.id));
-                addNotification("Ticket is delete successfully", types.success);
+                addNotification("Ticket is deleted successfully", types.success);
             }).catch(err => addNotification(err.message));
         },
         [addNotification],

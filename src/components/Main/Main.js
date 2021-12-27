@@ -9,14 +9,17 @@ import Header from '../Header';
 
 import PriceCard from './PriceCard';
 
+import { useAuthContext } from '../../contexts/AuthContext.js';
+import { Navigate } from 'react-router-dom';
+
 const tiers = [
     {
         title: 'Free',
         price: '0',
         description: [
-            '10 users included',
-            '2 GB of storage',
-            'Help center access',
+            '100 channels',
+            '4K channels',
+            'FHD channels',
             'Email support',
         ],
         buttonText: 'Sign up for free',
@@ -27,10 +30,10 @@ const tiers = [
         subheader: 'Most popular',
         price: '15',
         description: [
-            '20 users included',
-            '10 GB of storage',
-            'Help center access',
-            'Priority email support',
+            '500 channels',
+            '4K channels',
+            'FHD channels',
+            'Email support',
         ],
         buttonText: 'Get started',
         buttonVariant: 'contained',
@@ -39,10 +42,10 @@ const tiers = [
         title: 'Enterprise',
         price: '30',
         description: [
-            '50 users included',
-            '30 GB of storage',
-            'Help center access',
-            'Phone & email support',
+            '8000 channels',
+            '4K channels',
+            'FHD channels',
+            'Email support',
         ],
         buttonText: 'Contact us',
         buttonVariant: 'outlined',
@@ -52,9 +55,12 @@ const tiers = [
 const mainText = `Quickly build an effective pricing table for your potential customers with
 this layout. It's built with default MUI components with little
 customization.`;
+
 function PricingContent() {
 
+    const { user } = useAuthContext();
 
+    if (user.email) return <Navigate to="/player"/>
 
     return (
         <>
