@@ -11,7 +11,7 @@ const Logout = () => {
     const { addNotification } = useNotificationContext();
     
     useEffect(() => {
-        return authService.logout(user.accessToken)
+        authService.logout(user.accessToken)
             .then(() => {
                 addNotification('You logged out successfully', types.success);
                 logout();
