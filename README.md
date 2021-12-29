@@ -58,3 +58,5 @@ A page where only admin see all channels, he can add more and remove.
 route: '/admin/tickets'
 
 A page where only admin see all submited tickets, he can remove.
+
+http://tv-print.herokuapp.com/

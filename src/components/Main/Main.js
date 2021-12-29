@@ -52,9 +52,7 @@ const tiers = [
     },
 ];
 
-const mainText = `Quickly build an effective pricing table for your potential customers with
-this layout. It's built with default MUI components with little
-customization.`;
+const mainText = `Welcome to PrintTV`;
 
 function PricingContent() {
 
