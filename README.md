@@ -60,3 +60,9 @@ route: '/admin/tickets'
 A page where only admin see all submited tickets, he can remove.
 
 http://tv-print.herokuapp.com/
+
+## Demo Account
+
+email: peter@abv.bg
+
+password: 123456
