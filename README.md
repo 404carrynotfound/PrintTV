@@ -1,6 +1,6 @@
 # PrintTV - IPTV Application
 
-OdinSmurfs is an IPTV application built on ReactJS and NodeJS. It's purpose is to provide IPTV to everyone. The application also provides admin functionality where everything can be easily maganged.
+PrintTV is an IPTV application built on ReactJS and NodeJS. It's purpose is to provide IPTV to everyone. The application also provides admin functionality where everything can be easily maganged.
 
 The application has three levels of accessibility: guest user, administrator and registered user
 
